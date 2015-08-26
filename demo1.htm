@@ -1,0 +1,37 @@
+<html>
+<head>
+
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript" src="./jquery-ui.js"></script>
+<script type="text/javascript" src="./orca/orca.js"></script>
+<script type="text/javascript" src="./orca/orcaMatrix.js"></script>
+<script type="text/javascript" src="./demo.js"></script>
+<script type="text/javascript" src="./orca/webrtc-polyfill.js"></script>
+<script type="text/javascript" src="lib/browser-matrix-0.1.1.js"></script>
+
+</head>
+<body>
+<audio id="ring">
+<source src="./ukphone.mp3" type="audio/mpeg">
+</audio>
+<div id="page">
+	<div class="videoControls">
+		<input type="hidden" id="userid" name="userid" value="xxxx1" >
+		<input type="hidden" id="password" name="password" value="pppp1" >
+		<input type="hidden" id="usertocall" name="usertocall" value="xxxx2" >
+		<input type="button" class="callConnect" value="Connect" disabled="disabled">
+		<input type="button" class="callDisconnect" value="Disconnect" disabled="disabled">
+		<div class="videoContainer">
+			<video class="remoteVideo" src="" autoplay=""></video>
+			<video class="localVideo" src="" autoplay="" muted=""></video>
+		</div>
+		<div class="sessionStatusInfo">
+		&nbsp;
+		</div>
+		<div class="callStatusInfo">
+		&nbsp;
+		</div>
+	</div>
+</div>
+</body>
+</html>
