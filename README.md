@@ -75,6 +75,9 @@ This project has been constructed for demo purposes only and therefore has a num
 The signalling between the endpoints is not compatible with the Matrix application RTC signalling. To establish a call a new Matrix chat room is created and the second part is invited to join it. The library will automatically accept room invites from other Orca clients. Messages exchanged in this chat room consist of <A HREF="https://github.com/orcajs/reflector">Orca Reflector</A> messages packaged in to a Matrix message format.
 </p>
 <p>
+Testing has shown that rate limiting by the matrix.org domain servers may lead HTTP 429 errors and the loss of some messages between the clients. This typically results in the loss of ICE candidate information meaning that media between endpoints is not established even though the call signalling shows it being connected. This, demo quality, version of the library does not handle this problem. Retrying the call may yield a successful connection.
+</p>
+<p>
 For convenience this repository contains copies of the JQuery library and also the Matrix Web JS client. The latest version of the Matrix Web JS Client can be obtained from <A HREF="https://github.com/matrix-org/matrix-js-sdk">https://github.com/matrix-org/matrix-js-sdk</A></p> 
 <h1>ORCA Open Source License Agreement:</h1>
 
